@@ -26,10 +26,10 @@ $objs = %w[
   o + ".#{$OBJEXT}"
 end
 
-append_cflags('-fvisibility=hidden')
-append_cppflags('-DUNIVERSAL_PARSER=1')
+$CFLAGS << ' -fvisibility=hidden'
+$CPPFLAGS << ' -DUNIVERSAL_PARSER=1'
 
-$INCFLAGS << ' -I' << File.expand_path('../kanayago', __dir__)
-$INCFLAGS << ' -I' << File.expand_path('../..', __dir__)
+$INCFLAGS << ' -I' << File.expand_path('../kanayago', __dir__).quote
+$INCFLAGS << ' -I' << File.expand_path('../..', __dir__).quote
 
 create_makefile('kanayago/kanayago')

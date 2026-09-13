@@ -49,6 +49,7 @@ RUBY_PARSER_COPY_TARGETS = %w[
   parser_st.c
   parser_st.h
   parser_value.h
+  regenc.h
   ruby_assert.h
   ruby_atomic.h
   ruby_parser.c
